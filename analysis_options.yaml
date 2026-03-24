@@ -1,0 +1,18 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # Public package quality
+    public_member_api_docs: true
+    package_api_docs: true
+    # Code hygiene
+    prefer_single_quotes: true
+    sort_constructors_first: true
+    unawaited_futures: true
+    cancel_subscriptions: true
+    prefer_final_locals: true
+
+analyzer:
+  exclude:
+    - test/__snapshots__/**
+    - test/goldens/**

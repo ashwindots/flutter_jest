@@ -1,0 +1,42 @@
+name: flutter_jest_style
+description: >-
+  Jest-like testing for Flutter/Dart: snapshot matchers, mock helpers,
+  watch-mode CLI, and golden test utilities in one import.
+version: 1.0.0
+repository: https://github.com/AshwiniJoshi/flutter_jest_style
+homepage: https://github.com/AshwiniJoshi/flutter_jest_style
+issue_tracker: https://github.com/AshwiniJoshi/flutter_jest_style/issues
+topics:
+  - testing
+  - snapshot
+  - mocking
+  - jest
+  - golden-tests
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  # Cross-platform path manipulation for __snapshots__ directory resolution
+  path: ^1.9.0
+  # Custom Matcher base class (SnapshotMatcher extends Matcher)
+  matcher: ^0.12.17
+  # Zero-codegen mocking — wrapped to provide Jest-like fn() syntax
+  mocktail: ^1.0.4
+  # File-system watcher for --watch mode
+  watcher: ^1.1.1
+  # CLI argument parsing for bin/fjest.dart
+  args: ^2.6.0
+  # Annotation helpers for internal APIs
+  meta: ^1.16.0
+
+  # Core Dart testing framework — re-exported for users
+  test: ^1.25.6
+
+dev_dependencies:
+  lints: ^6.0.0
+  # Higher-level golden test utilities for visual regression
+  golden_toolkit: ^0.15.0
+
+executables:
+  fjest: fjest
